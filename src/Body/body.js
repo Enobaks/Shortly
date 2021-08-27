@@ -15,7 +15,7 @@ const Body = () => {
     const [url, setUrl] = useState('');
     const [shortUrl, setShortUrl] = useState(null)
     const [loading, setLoading] = useState(false)
-    const linkArray = []
+    const [linkArray, setLinkArray] = useState([])
     
     const handleSubmit = async(e)=>{
         e.preventDefault();
@@ -32,10 +32,10 @@ const Body = () => {
     useEffect(()=>{ 
         if(shortUrl){
             const {short_link, original_link} = shortUrl
-            linkArray.push({short_link, original_link})
+            setLinkArray({short_link, original_link})
         }
 
-    }, [shortUrl, linkArray])
+    }, [shortUrl, setLinkArray])
     useEffect(()=>{
         // console.log(shortUrl)
         console.log(linkArray)
