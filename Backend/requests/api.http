@@ -1,0 +1,6 @@
+POST http://localhost:5000/api/url/shorten
+Content-Type: application/json
+
+{
+    "longUrl": "https://www.lindaikejisblog.com/2022/3/kiki-osinbajo-releases-stunning-photos-as-she-celebrates-her-birthday.html"
+}
